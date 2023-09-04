@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualização</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Visualização</h1>
+    </div>
+    
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/" class="btn btn-info">Voltar</a>
+    </div>
+    
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <strong>Tipo: </strong> {{db.tipo}}<br>
+        <strong>Cor: </strong> {{db.cor}}<br>
+        <strong>Marca: </strong> {{db.marca}}<br>
+        <strong>Modelo: </strong> {{db.modelo}}<br>
+        <strong>Ano: </strong> {{db.ano}}<br>
+        <strong>Estado: </strong> {{db.estado}}<br>
+        <strong>KM rodados: </strong> {{db.km}}<br>
+        <strong>Passagem: </strong> {{db.passagem}}<br>
+        <strong>Forma de pagamento: </strong> {{db.pagamento}}<br>
+    </div>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Kanit', sans-serif;
+}
+
+body{
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(#00010e, #01002b);
+   color: aliceblue;
+}
+
+
+
+</style>
+</html>

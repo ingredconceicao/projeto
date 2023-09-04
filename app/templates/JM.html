@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Veiculos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>JM Veiculos</h1>
+    </div>
+
+
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/form" class="btn btn-success">Adicionar</a>
+    </div>
+
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Cor</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Modelo</th>
+              <th scope="col">Ano</th>
+              <th scope="col">Estado</th>
+              <th scope="col">KM rodados</th>
+              <th scope="col">Passagem(leilão)</th>
+              <th scope="col">Forma de pagamento</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for dbs in db %}
+            <tr>
+               <th>{{dbs.id}}</th>
+               <th>{{dbs.tipo}}</th>
+               <th>{{dbs.cor}}</th>
+               <td>{{dbs.marca}}</td>
+               <td>{{dbs.modelo}}</td>
+               <td>{{dbs.ano}}</td>
+               <th>{{dbs.estado}}</th>
+               <th>{{dbs.km}}</th>
+               <th>{{dbs.passagem}}</th>
+               <th>{{dbs.pagamento}}</th>
+               <td>
+                   <a href="/view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+                   <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
+                   <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+               </td>
+             </tr>
+           {% endfor %}
+          </tbody>
+        </table>
+    </div>
+
+</body>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    color: aliceblue;
+    background: linear-gradient(#00010e, #01002b);
+}
+
+.btn-dark,.btn-primary,.btn-danger{
+    display: block;
+
+}
+
+</style>
+
+
+</html> 
